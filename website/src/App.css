@@ -1,4 +1,3 @@
-
 body {
   height: 100%;
   background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
@@ -7,8 +6,8 @@ body {
   transition: 1s;
 }
 #root {
- height:50px;
- width:0px;
+  height: 50px;
+  width: 0px;
 }
 nav {
   position: fixed;
@@ -19,23 +18,21 @@ nav {
   /* background: green; */
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
-
 }
 .container {
   position: relative;
   height: auto;
   margin-left: 100px;
   margin-right: 100px;
-
 }
 .container .w3-right {
-  display:inline-block;
+  display: inline-block;
   position: absolute;
   top: auto;
-  height:60px;
-  width:60px;
+  height: 60px;
+  width: 60px;
   line-height: 60px;
   text-align: center;
   border-radius: 10px;
@@ -45,74 +42,73 @@ nav {
 }
 
 .container .w3-left {
-  display:inline-block;
-  position: absolute;
+  display: inline-block;
+  position: relative;
   top: auto;
-  height:60px;
-  width:60px;
+  height: 60px;
+  width: 60px;
   line-height: 60px;
   text-align: center;
   border-radius: 10px;
   background-color: black;
   /* margin-left: 20px; */
   /* float: right; */
-  left: 20%;
+  left: 100px;
   font-size: 50px;
 }
-h1{
+h1 {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   margin-bottom: 35px;
 }
-h2{
+h2 {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
-  
 }
-#introtext{
+#introtext {
   text-align: center;
 }
-h3{
- font-size: 1px;
+h3 {
+  font-size: 1px;
 }
-p{
+p {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align:left;
+  text-align: left;
   justify-content: center;
   width: 50%;
 }
-.intro{
+.intro {
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100% ;
+  width: 100%;
   height: 100vh;
   background-color: #1c1d20;
   transition: 1s;
-  margin:0;
+  margin: 0;
 }
-.intro{
+.intro {
   position: fixed;
   z-index: 1;
   left: 0;
   top: 0;
-  width: 100% ;
+  width: 100%;
   height: 100vh;
   background-color: #1c1d20;
-  transition: 0s ;
+  transition: 0s;
   /* transition-delay: 1s; */
-  margin:0;
+  margin: 0;
 }
 .intro.second {
-  transition: 1s ;
+  transition: 1s;
   /* transition-delay: 1s; */
   transform: translateY(-100vh);
 }
@@ -127,17 +123,17 @@ p{
   transition: 1s;
   margin:0;
 } */
-#darkMode{
-  position:relative;
+#darkMode {
+  position: relative;
   background: transparent;
   border: none;
-  height:50px;
-  width:50px;
+  height: 50px;
+  width: 50px;
 }
-.dark-mode{
+.dark-mode {
   position: absolute;
   /* background-color: #3cba92; */
-  color:#1c1d20;
+  color: #1c1d20;
   /* border: 2px solid ;
   border-radius: 10px; */
   /* bottom: 10px;
@@ -145,122 +141,135 @@ p{
   top: -2px;
   left: -1px;
   font-size: 30px;
-  height:50px;
-  width:50px;
+  height: 50px;
+  width: 50px;
 }
-.dark-mode:hover{
-  color:white;
+.dark-mode:hover {
+  color: white !important;
   transition-duration: 0.2s;
   transform: translateY(-3px);
-  cursor:pointer
+  cursor: pointer;
 }
-#skipIntro{
+#skipIntro {
   position: absolute;
   background-color: #1c1d20;
-  color:#3cba92;
-  border: 2px solid ;
+  color: #3cba92;
+  border: 2px solid;
   border-radius: 10px;
   bottom: 10px;
   right: 100px;
   font-size: 30px;
-  height:75px;
-  width:150px;
+  height: 75px;
+  width: 150px;
 }
-#skipIntro:hover{
+#skipIntro:hover {
   transition-duration: 0.2s;
   transform: translateY(-3px);
-  cursor:pointer
+  cursor: pointer;
 }
-.links{
+.links {
   margin: 0 auto;
-  color:#1c1d20;
+  color: #1c1d20;
   text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align:left;
+  text-align: left;
   justify-content: center;
   width: 50%;
 }
-.links:hover{
+.links:hover {
   transition-duration: 0.2s;
   transform: translateY(-3px);
-  cursor:pointer;
-  color:white !important;
+  cursor: pointer;
+  color: white !important;
 }
-iframe { 
+iframe {
   display: block;
   width: 640px;
   height: 480px;
   margin: 0 auto;
-
 }
-img { 
+img {
   display: block;
   /* width: auto;
   height: auto; */
   margin: 0 auto;
   margin-bottom: 10px;
-
 }
-.mySlides {display:none;
-  /* position: relative; */
-  align-items:center;
-  justify-content: center;}
-.w3-left:hover, .w3-right:hover, .w3-badge {
+.mySlides {
+  display: none;
+  /* position: absolute; */
+  align-items: center;
+  justify-content: center;
+}
+.w3-left:hover,
+.w3-right:hover,
+.w3-badge {
   /* position:fixed; */
   transition-duration: 0.2s;
   transform: translateY(-3px);
-  cursor:pointer}
-.w3-badge {height:13px;width:13px;padding:0}
-video{
+  cursor: pointer;
+}
+.w3-badge {
+  height: 13px;
+  width: 13px;
+  padding: 0;
+}
+video {
   display: flex;
   flex-direction: column;
-  align-items:center;
+  align-items: center;
   justify-content: center;
 }
-.nav-text{
+.nav-text {
   font-size: 15px;
   margin: 0;
   width: 100px;
 }
-nav img{
-  width:50px;
+nav img {
+  width: 50px;
   height: 50px;
 }
-.nav-svg{
-  width:50px;
+.nav-svg {
+  width: 50px;
   height: 50px;
-  color:#1c1d20;
+  color: #1c1d20;
 }
-.nav-svg:hover{
-  cursor:pointer;
+.nav-svg:hover {
+  cursor: pointer;
   /* color:white; */
-  color:rgb(0, 195, 255) !important;
+  color: rgb(0, 195, 255) !important;
 }
-.email{
+.email {
   margin-top: 100px;
   margin-bottom: 110px;
   text-decoration: none;
-  rotate:270deg;
+  rotate: 270deg;
   color: white;
 }
-.resume{
-  font-size: 25px;
-  margin-bottom:10px;
-  transition-duration: 0.4s;
+.resume {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 95px;
+  margin-bottom: 10px;
+  transition-duration: 0.2s;
   text-decoration: none;
-  background-color: #4CAF50;
+  background-color: black;
   color: white;
-  border: 2px solid ;
+  border: 2px solid;
+  border-radius: 10px;
 }
-.resume:hover{
-  background-color: white; 
-  color: #4CAF50;
+.resume:hover {
+  background-color: white;
+  color: rgb(0, 195, 255);
 }
-nav img:hover{
-  cursor:pointer;
-  background-color:rgb(255, 251, 0)
+nav img:hover {
+  cursor: pointer;
+  background-color: rgb(255, 251, 0);
 }
 /* .email.grow {
   transition: all .2s ease-in-out;
@@ -285,20 +294,19 @@ nav img:hover{
   font-size: 100px;
   text-align: center;
 } */
-div{
+div {
   margin-left: 50px;
   line-height: 80px;
   display: flex;
   justify-content: center;
-  align-items:center;
+  align-items: center;
   height: 200px;
   font-size: 60px;
-  font-family: 'Droid Sans', sans-serif;
+  font-family: "Droid Sans", sans-serif;
   /* font-family: "Optima", sans-serif; */
 }
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -426,7 +434,9 @@ div{
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.buzz-out-on-hover:hover, .buzz-out-on-hover:focus, .buzz-out-on-hover:active {
+.buzz-out-on-hover:hover,
+.buzz-out-on-hover:focus,
+.buzz-out-on-hover:active {
   -webkit-animation-name: buzz-out-on-hover;
   animation-name: buzz-out-on-hover;
   -webkit-animation-duration: 0.75s;
