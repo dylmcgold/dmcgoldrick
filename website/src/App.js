@@ -4,7 +4,10 @@ import Typewriter from "typewriter-effect/dist/core";
 import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import Layout from "./Layout";
 import Experience from "./Experience";
+import About from "./About";
+import Projects from "./Projects";
 // import $ from "jquery";
 
 function App() {
@@ -19,6 +22,13 @@ function App() {
   // }
   // document.getElementById("text").innerHTML = "";
   // typing();
+  <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<About />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="experience" element={<Experience />} />
+        </Route>
+      </Routes>
   const navigate = useNavigate();
 
   const handleClick = () => {
