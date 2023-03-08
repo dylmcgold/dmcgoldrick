@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/dmcgoldrick/static/css/main.c42496d0.css",
+    "main.js": "/dmcgoldrick/static/js/main.49b2582b.js",
+    "static/js/787.71e672d5.chunk.js": "/dmcgoldrick/static/js/787.71e672d5.chunk.js",
+    "index.html": "/dmcgoldrick/index.html",
+    "static/media/logo.svg": "/dmcgoldrick/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "main.c42496d0.css.map": "/dmcgoldrick/static/css/main.c42496d0.css.map",
+    "main.49b2582b.js.map": "/dmcgoldrick/static/js/main.49b2582b.js.map",
+    "787.71e672d5.chunk.js.map": "/dmcgoldrick/static/js/787.71e672d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c42496d0.css",
+    "static/js/main.49b2582b.js"
+  ]
+}
