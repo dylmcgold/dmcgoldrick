@@ -1,12 +1,13 @@
 body {
   height: 100%;
-  background: linear-gradient(to top, #0ba360 0%, #3cba92 100%);
-  color: #ecf0f1;
+  background: linear-gradient(to top, #FEFEF1 0%,  #FEFCD6 100%);
+  color: #4c5152;
   line-height: 1.618em;
   transition: 1s;
+  margin-bottom: 50px;
 }
 #root {
-  height: 0px;
+  height: 50px;
   width: 0px;
 }
 nav {
@@ -71,7 +72,8 @@ nav {
   line-height: 60px;
   text-align: center;
   border-radius: 10px;
-  background-color: black;
+  color: white;
+  background-color: #4c5152;
   right: -100px;
   font-size: 50px;
 }
@@ -85,7 +87,8 @@ nav {
   line-height: 60px;
   text-align: center;
   border-radius: 10px;
-  background-color: black;
+  color: white;
+  background-color: #4c5152;
   margin-left: 0;
   /* float: right; */
   left: -100px;
@@ -132,7 +135,7 @@ p {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #1c1d20;
+  background-color: #FEFCD6;
   transition: 1s;
   margin: 0;
 }
@@ -143,7 +146,7 @@ p {
   top: 0;
   width: 100%;
   height: 100vh;
-  background-color: #1c1d20;
+  background-color: #FEFCD6;
   transition: 0s;
   /* transition-delay: 1s; */
   margin: 0;
@@ -202,7 +205,7 @@ p {
 .dark-mode {
   position: absolute;
   /* background-color: #3cba92; */
-  color: #1c1d20;
+  color: #4c5152;
   /* border: 2px solid ;
   border-radius: 10px; */
   /* bottom: 10px;
@@ -214,15 +217,15 @@ p {
   width: 50px;
 }
 .dark-mode:hover {
-  color: white !important;
+  color: rgb(0, 125, 163)  !important;
   transition-duration: 0.2s;
   transform: translateY(-3px);
   cursor: pointer;
 }
 #skipIntro {
   position: absolute;
-  background-color: #1c1d20;
-  color: #3cba92;
+  background-color: #FEFCD6;
+  color: rgb(0, 125, 163);
   border: 2px solid;
   border-radius: 10px;
   bottom: 10px;
@@ -251,7 +254,7 @@ p {
   transition-duration: 0.2s;
   transform: translateY(-3px);
   cursor: pointer;
-  color: white !important;
+  color: black !important;
 }
 iframe {
   display: block;
@@ -303,19 +306,22 @@ nav img {
 .nav-svg {
   width: 50px;
   height: 50px;
-  color: #1c1d20;
+  color: #4c5152;
 }
 .nav-svg:hover {
   cursor: pointer;
   /* color:white; */
-  color: rgb(0, 195, 255) !important;
+  color: rgb(0, 125, 163) !important;
 }
 .email {
   margin-top: 100px;
   margin-bottom: 110px;
   text-decoration: none;
   rotate: 270deg;
-  color: white;
+  color: #4c5152;
+}
+.email:hover {
+  color: rgb(0, 125, 163) !important;
 }
 .resume {
   font-size: 20px;
@@ -327,14 +333,14 @@ nav img {
   margin-bottom: 10px;
   transition-duration: 0.2s;
   text-decoration: none;
-  background-color: black;
+  background-color: #4c5152;
   color: white;
   border: 2px solid;
   border-radius: 10px;
 }
 .resume:hover {
   background-color: white;
-  color: rgb(0, 195, 255);
+  color: rgb(0, 125, 163) ;
 }
 nav img:hover {
   cursor: pointer;
