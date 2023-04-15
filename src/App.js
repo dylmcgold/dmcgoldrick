@@ -9,6 +9,20 @@ import Experience from "./Experience";
 import About from "./About";
 import Projects from "./Projects";
 // import $ from "jquery";
+import { initializeApp } from "firebase/app";
+import { getFirestore, updateDoc, doc, getDoc } from "firebase/firestore";
+
+const firebaseConfig = {
+  apiKey: process.env.REACT_APP_FB_API_KEY,
+  authDomain: "db-personalwebsite.firebaseapp.com",
+  projectId: "db-personalwebsite",
+  storageBucket: "db-personalwebsite.appspot.com",
+  messagingSenderId: "784110217143",
+  appId: "1:784110217143:web:ae6f1800faeab3930eaa32",
+};
+
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
 function App() {
   // var i = 0;
@@ -23,17 +37,32 @@ function App() {
   // document.getElementById("text").innerHTML = "";
   // typing();
   <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<About />} />
-          <Route path="projects" element={<Projects />} />
-          <Route path="experience" element={<Experience />} />
-        </Route>
-      </Routes>
+    <Route path="/" element={<Layout />}>
+      <Route index element={<About />} />
+      <Route path="projects" element={<Projects />} />
+      <Route path="experience" element={<Experience />} />
+    </Route>
+  </Routes>;
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/");
   };
+
+  // console.log(newFields);
+  const updateButton = async (id) => {
+    const buttonDoc = doc(db, "button", id);
+    const docButtonSnap = await getDoc(buttonDoc);
+    const oldNum = docButtonSnap.data().num;
+    // console.log(docButtonSnap.data());
+    const newFields = { num: oldNum + 1 };
+    document.querySelector("#dbbutton").innerHTML = `${oldNum + 1}`;
+    await updateDoc(buttonDoc, newFields);
+  };
+  document
+    .getElementById("dbbutton")
+    .addEventListener("click", () => updateButton("ytby1nUtjqjNiOOHpJzG"));
+  // updateButton();
   // const tabs = document.querySelectorAll("[data-tab-target]");
   // console.log(tabs);
   // const tabContents = document.querySelectorAll("[data-tab-content]");
@@ -88,7 +117,7 @@ function App() {
       body.style.background = "#1c1d20";
       body.style.color = "white";
       darkMode.style.color = "white";
-      email.style.color ="white";
+      email.style.color = "white";
       navsvg.forEach((element) => (element.style.color = "white"));
       links.forEach((element) => (element.style.color = "white"));
       // navsvg.style.color = "white";
@@ -97,7 +126,7 @@ function App() {
       body.style.background =
         "linear-gradient(to top, #FEFEF1 0%, #FEFCD6 100%)";
       body.style.color = "#4c5152";
-      email.style.color ="#4c5152";
+      email.style.color = "#4c5152";
       darkMode.style.color = "#4c5152";
       // navsvg.style.color = "#1c1d20";
       navsvg.forEach((element) => (element.style.color = "#4c5152"));
@@ -185,11 +214,33 @@ function App() {
     .getElementById("skipIntro")
     .addEventListener("click", () => removeTypewrite());
   const [isLoading, setIsLoading] = useState(false);
-
+  async function getapi(url) {
+    const response = await fetch(url);
+    var data = await response.json();
+    // console.log(data);
+    document.querySelector("#apiPhoto").innerHTML = `
+    <h2>NASA Photo of the Day</h2>
+    <p>Title: ${data.title}   </p>
+    <img src ="${data.url}" width="400px"/>
+    <p>Copyright: ${data.copyright}</p>`;
+  }
   useEffect(() => {
     typewrite();
+    getapi("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
     // console.log('Page is loaded');
   }, []);
+  // const api_url = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY";
+
+  // fetch("https://zenquotes.io/api/random")
+  //   .then((response) => response.json())
+  //   .then((data) => {
+  //     console.log(data);
+  //     // Handle the fetched data here
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //     // Handle errors here
+  //   });
   let intro = document.querySelector(".intro");
   var app = document.getElementById("introtext");
   function typewrite() {
@@ -216,12 +267,12 @@ function App() {
       .start();
     setIsLoading(true);
     setTimeout(() => {
-      console.log("First function has completed");
+      // console.log("First function has completed");
       removeTypewrite();
     }, 21000);
   }
   function removeTypewrite() {
-    console.log("Second function has completed");
+    // console.log("Second function has completed");
     app.innerHTML = "";
     // const intro = document.querySelector('.intro');
 
