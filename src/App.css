@@ -5,6 +5,7 @@ body {
   line-height: 1.618em;
   transition: 1s;
   margin-bottom: 50px;
+  padding: 30px;
 }
 #root {
   height: 50px;
@@ -264,8 +265,7 @@ iframe {
 }
 img {
   display: block;
-  /* width: auto;
-  height: auto; */
+  max-width: 100%;
   margin: 0 auto;
   margin-bottom: 10px;
 }
