@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import Typewriter from "typewriter-effect/dist/core";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Layout from "./Layout";
@@ -240,10 +240,13 @@ function App() {
   //     // Handle errors here
   //   });
   let intro = document.querySelector(".intro");
-  var app = document.getElementById("introtext");
+  // var app = document.getElementById("introtext");
+
+  // console.log(app);
+  const introTextRef = useRef(null);
   function typewrite() {
     // console.log('First function is running');
-    var typewriter = new Typewriter(app, {
+    var typewriter = new Typewriter(introTextRef.current, {
       autoStart: true,
       delay: 75,
     });
@@ -271,13 +274,14 @@ function App() {
   }
   function removeTypewrite() {
     // console.log("Second function has completed");
-    app.innerHTML = "";
-    // const intro = document.querySelector('.intro');
-
-    setTimeout(() => {
-      intro.classList.add("second");
-    }, 0);
-    // intro.style.top = '-100vh'
+    // app.innerHTML = "";
+    const intro = document.querySelector(".intro");
+    intro.classList.add("second");
+    // setTimeout(() => {
+    //   intro.classList.add("second");
+    // }, 0);
+    // intro.style.top = "-100vh";
+    setIsIntro(false);
     setIsLoading(false);
   }
   // app.onload(typewrite())
@@ -289,8 +293,9 @@ function App() {
   // app.addEventListener("load",typewrite())
   return (
     <div className="App">
+      {/* {isIntro ? typewrite() : } */}
       <div className="intro">
-        <div id="introtext"></div>
+        <div ref={introTextRef}></div>
         <button id="skipIntro">Skip</button>
       </div>
       <nav>
@@ -385,7 +390,9 @@ function App() {
           about software engineering and I enjoy working on projects related to
           computer science. Recently I've taken a liking to front-end
           development and building websites, but I'm always interested in the
-          back-end stuff and how the underlying structures work. <br />
+          back-end stuff and how the underlying structures work.
+        </p>
+        <p>
           Hopefully you can take a look at some of my projects and find
           something that interests you!
         </p>
@@ -398,17 +405,15 @@ function App() {
         <iframe
           className="musicmate"
           src="https://drive.google.com/file/d/1eRPjpqeXySQEg2-RvsyeYhQm7P5Bfo6q/preview"
-          width="640"
-          height="480"
           allow="autoplay"
         ></iframe>
         <p>
           MusicMate is a project that is designed to integrate a more social
-          component into using spotify and allow friends to see eachothers
+          component into using Spotify and allow friends to see each other's
           listening preferences easily. Getting the Spotify API up and running
           was a little tricky, but it is super cool to implement it so that we
           can start seeing some data! This demo was recorded using a demo
-          account which was used primarily during christmas time and explains
+          account which was used primarily during Christmas time and explains
           some of the limited data.
         </p>
         <h2>VikingScript</h2>
@@ -425,7 +430,7 @@ function App() {
           are more aesthetically pleasing to vikings. As part of a compilers and
           language course, a compiler was developed for VikingScript that
           converts VikingScript code into JavaScript. You can find out more on
-          the website hosted on github pages. You might like the Viking-themed
+          the website hosted on GitHub Pages. You might like the Viking-themed
           music on the page!
         </p>
         <h2>Christmas tree LED</h2>
@@ -473,7 +478,7 @@ function App() {
           ></span>
         </div>
         <p>
-          An arduino and LED light strip project that I wrapped around the
+          An Arduino and LED light strip project that I wrapped around the
           Christmas tree. Wrote custom programs such as one that plays snake,
           one that looks like lightning, one that looks like fire, and more.
         </p>
@@ -487,7 +492,7 @@ function App() {
         </a>
         <p>
           A very simple web app and also one of my first, that is nicely hosted
-          on github pages and calculates compound interest.
+          on GitHub Pages and calculates compound interest.
         </p>
 
         {/* <!-- </div> -->
@@ -531,15 +536,20 @@ function App() {
     <img src = "mongodbex.png" width="640" height="480"/> --> */}
         <p>
           Here I have included screenshots of some queries I've performed in a
-          varitety of databases including PostgreSQL, Neo4j, and MongoDB. <br />
-          In Neo4j, I loaded 900,000 amazon product data points into product and
+          variety of databases including PostgreSQL, Neo4j, and MongoDB.{" "}
+        </p>
+        <p>
+          In Neo4j, I loaded 900,000 Amazon product data points into product and
           category nodes, and created around 200,000 relationships. You can see
-          the relationships and queries in the photos above. <br />
+          the relationships and queries in the photos above.{" "}
+        </p>
+        <p>
           For the same dataset in PostgreSQL, I included an example of one query
           that gets the number of ratings of the top 5 available rating scores.{" "}
-          <br />
+        </p>
+        <p>
           MongoDB uses the same dataset as well, and the example query finds
-          amazon products less than or equal to $15.
+          Amazon products less than or equal to $15.
         </p>
         <h2>Algorithms</h2>
         <p>
@@ -553,7 +563,7 @@ function App() {
           learning, search trees, and neural networks.
         </p>
         <div id="apiPhoto"></div>
-        <h2>Database Button Counter</h2>
+        <h2>Firebase Button Counter</h2>
         <p>How many times has the button been pressed?</p>
         <button
           id="dbbutton"
