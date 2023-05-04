@@ -1,4 +1,32 @@
 export default function Nav() {
+  let darkModeState = 0;
+
+  function darkMode() {
+    let body = document.querySelector("body");
+    let darkMode = document.querySelector(".dark-mode");
+    let email = document.querySelector(".email");
+    let navsvg = document.querySelectorAll(".nav-svg");
+    let links = document.querySelectorAll(".links");
+    if (darkModeState === 0) {
+      body.style.background = "#1c1d20";
+      body.style.color = "white";
+      darkMode.style.color = "white";
+      email.style.color = "white";
+      navsvg.forEach((element) => (element.style.color = "white"));
+      links.forEach((element) => (element.style.color = "white"));
+      darkModeState = 1;
+    } else {
+      body.style.background =
+        "linear-gradient(to top, #FEFEF1 0%, #FEFCD6 100%)";
+      body.style.color = "#4c5152";
+      email.style.color = "#4c5152";
+      darkMode.style.color = "#4c5152";
+      navsvg.forEach((element) => (element.style.color = "#4c5152"));
+      links.forEach((element) => (element.style.color = "#4c5152"));
+      darkModeState = 0;
+    }
+  }
+
   return (
     <nav>
       <a href="ResumeMarch.pdf" target="_blank" className="resume">

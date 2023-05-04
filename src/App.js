@@ -9,7 +9,6 @@ import Layout from "./Layout";
 import Experience from "./Experience";
 import About from "./About";
 import Projects from "./Projects";
-// import $ from "jquery";
 import { initializeApp } from "firebase/app";
 import { getFirestore, updateDoc, doc, getDoc } from "firebase/firestore";
 
@@ -26,27 +25,6 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 function App() {
-  // var i = 0;
-  // var text = "Hello! And welcome to my website! Here you will find my projects and other things I've worked on."
-  // function typing(){
-  //   if (i < text.length){
-  //     document.getElementById("text").innerHTML += text.charAt(i);
-  //     i++;
-  //     setTimeout(typing, 100);
-  //   }
-  // }
-  // document.getElementById("text").innerHTML = "";
-  // typing();
-  // <Routes>
-  //   <Route path="/" element={<Layout />}>
-  //     <Route index element={<About />} />
-  //     <Route path="projects" element={<Projects />} />
-  //     <Route path="experience" element={<Experience />} />
-  //   </Route>
-  // </Routes>;
-  // const navigate = useNavigate();
-
-  // console.log(newFields);
   const updateButton = async (id) => {
     const buttonDoc = doc(db, "button", id);
     const docButtonSnap = await getDoc(buttonDoc);
@@ -56,90 +34,7 @@ function App() {
     document.querySelector("#dbbutton").innerHTML = `${oldNum + 1}`;
     await updateDoc(buttonDoc, newFields);
   };
-  // updateButton();
-  // const tabs = document.querySelectorAll("[data-tab-target]");
-  // console.log(tabs);
-  // const tabContents = document.querySelectorAll("[data-tab-content]");
-  // tabs.forEach(async (tab) => {
-  //   tab.addEventListener("click", () => {
-  //     const target = document.querySelector(tab.dataset.tabTarget);
-  //     tabContents.forEach((tabContent) => {
-  //       tabContent.classList.remove("active");
-  //     });
-  //     tabs.forEach((tab) => {
-  //       tab.classList.remove("active");
-  //     });
-  //     // document.querySelector(".artistBox").innerHTML = "";
-  //     // console.log("executes");
-  //     tab.classList.add("active");
-  //     target.classList.add("active");
-  //   });
-  // });
-  // function print() {
-  //   const tabs = document.querySelectorAll("[data-tab-target]");
-  //   console.log(tabs);
-  //   const tabContents = document.querySelectorAll("[data-tab-content]");
-  //   tabs.forEach(async (tab) => {
-  //     tab.addEventListener("click", () => {
-  //       const target = document.querySelector(tab.dataset.tabTarget);
-  //       tabContents.forEach((tabContent) => {
-  //         tabContent.classList.remove("active");
-  //       });
-  //       tabs.forEach((tab) => {
-  //         tab.classList.remove("active");
-  //       });
-  //       // document.querySelector(".artistBox").innerHTML = "";
-  //       // console.log("executes");
-  //       tab.classList.add("active");
-  //       target.classList.add("active");
-  //     });
-  //   });
-  // }
-  // $(document).ready(() => print());
 
-  let darkModeState = 0;
-
-  function darkMode() {
-    let body = document.querySelector("body");
-    let darkMode = document.querySelector(".dark-mode");
-    let email = document.querySelector(".email");
-    let navsvg = document.querySelectorAll(".nav-svg");
-    let links = document.querySelectorAll(".links");
-    // console.log(navsvg);
-    if (darkModeState === 0) {
-      // let body = document.querySelector('body');
-      // let darkMode = document.querySelector('.dark-mode');
-      body.style.background = "#1c1d20";
-      body.style.color = "white";
-      darkMode.style.color = "white";
-      email.style.color = "white";
-      navsvg.forEach((element) => (element.style.color = "white"));
-      links.forEach((element) => (element.style.color = "white"));
-      // navsvg.style.color = "white";
-      darkModeState = 1;
-    } else {
-      body.style.background =
-        "linear-gradient(to top, #FEFEF1 0%, #FEFCD6 100%)";
-      body.style.color = "#4c5152";
-      email.style.color = "#4c5152";
-      darkMode.style.color = "#4c5152";
-      // navsvg.style.color = "#1c1d20";
-      navsvg.forEach((element) => (element.style.color = "#4c5152"));
-      links.forEach((element) => (element.style.color = "#4c5152"));
-      darkModeState = 0;
-    }
-
-    // console.log('button');
-
-    // app.innerHTML = "";
-    // const intro = document.querySelector('.intro');
-
-    // setTimeout(() => {
-    //   intro.classList.add('second');
-    // }, 0);
-    // // intro.style.top = '-100vh'
-    // setIsLoading(false);
-  }
   let slideIndex = 1;
 
   //showDivs(slideIndex);
@@ -151,7 +46,6 @@ function App() {
 
   function currentDiv(n, slideNo) {
     showDivs((slideIndex = n), slideNo);
-    // console.log("executing");
   }
 
   function showDivs(n, slideNo) {
@@ -220,7 +114,6 @@ function App() {
   async function getapi(url) {
     const response = await fetch(url);
     var data = await response.json();
-    // console.log(data);
     document.querySelector("#apiPhoto").innerHTML = `
     <h2>NASA Photo of the Day</h2>
     <p>Title: ${data.title}   </p>
