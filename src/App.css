@@ -53,18 +53,13 @@ nav {
   margin: 15%; */
 }
 .container {
-  position: relative;
   /* justify-content: center;
   margin: auto; */
   align-items: center;
   /* margin: 0 auto; */
-  top: 50%;
   /* left: 20%; */
-  left: 20%;
-  transform: translateX(-50%);
   text-align: center;
   height: auto;
-  display: inline-block;
   margin-left: 0;
   /* margin-right: 100px; */
 }
@@ -132,7 +127,7 @@ p {
   align-items: center;
   text-align: left;
   justify-content: center;
-  width: 50%;
+  width: 75%;
 }
 .intro {
   position: fixed;
@@ -163,7 +158,10 @@ p {
   transform: translateY(-100vh);
 }
 #main {
-  height: 100%;
+  margin-left: 200px;
+}
+img.mySlides2 {
+  display: block;
 }
 /* [data-tab-content] {
   display: none;
@@ -272,11 +270,9 @@ iframe {
   margin: 0 auto;
 }
 img {
-  /* display: block; */
+  display: block;
   max-width: 100%;
   max-height: 50%;
-  margin: 0 auto;
-  margin-left: 100px;
   margin-bottom: 10px;
 }
 .mySlides {

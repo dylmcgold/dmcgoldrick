@@ -223,7 +223,7 @@ function App() {
     document.querySelector("#apiPhoto").innerHTML = `
     <h2>NASA Photo of the Day</h2>
     <p>Title: ${data.title}   </p>
-    <img src ="${data.url}" width="400px"/>
+    <p><img src ="${data.url}" /></p>
     <p>Copyright: ${data.copyright}</p>`;
   }
 
@@ -370,18 +370,6 @@ function App() {
         </button>
       </nav>
 
-      {/* <!-- <ul className="tabs">
-      <li data-tab-target="#about" className="active tab">About Me</li>
-      <li data-tab-target="#projects" className="tab">Projects</li>
-      <li data-tab-target="#experience" className="tab">Experience</li>
-    </ul> -->
-    <!-- <div className="tabs">
-      <button id="about" className="tab">About</button>
-      <button id="projects" className="tab">Projects</button>
-      <button id="experience" className="tab">Experience</button>
-    </div> -->
-    <!-- <div className="tab-content">
-      <div id="about" data-tab-content className="active"> --> */}
       <div id="main">
         <h1>About Me</h1>
         <p>
@@ -417,7 +405,9 @@ function App() {
           some of the limited data.
         </p>
         <h2>VikingScript</h2>
-        <img src="VikingscriptHome.png" />
+        <p>
+          <img src="VikingscriptHome.png" />
+        </p>
         <a
           className="links"
           href="https://willr2001.github.io/VikingScript/"
@@ -501,14 +491,18 @@ function App() {
         <h1>Experience</h1>
         <h2>Databases</h2>
         <div className="container">
-          <img className="mySlides2" src="neo4jex1.png" />
-          {/* <!-- <div className="captiontext2">Caption</div> -->
-      <!-- <div className="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
-        French Alps
-      </div> --> */}
-          <img className="mySlides2" src="neo4jex2.png" />
-          <img className="mySlides2" src="postgresqlex.png" />
-          <img className="mySlides2" src="mongodbex.png" />
+          <p>
+            <img className="mySlides2" src="neo4jex1.png" />
+          </p>
+          <p>
+            <img className="mySlides2" src="neo4jex2.png" />
+          </p>
+          <p>
+            <img className="mySlides2" src="postgresqlex.png" />
+          </p>
+          <p>
+            <img className="mySlides2" src="mongodbex.png" />
+          </p>
           {/* <!-- <div className="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%"> --> */}
           <div id="w3-left2" className="w3-left w3-hover-text-khaki">
             &#10094;
