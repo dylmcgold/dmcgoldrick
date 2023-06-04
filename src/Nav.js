@@ -1,3 +1,5 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Nav() {
   let darkModeState = 0;
 
@@ -5,99 +7,99 @@ export default function Nav() {
     let body = document.querySelector("body");
     let darkMode = document.querySelector(".dark-mode");
     let email = document.querySelector(".email");
+    let resume = document.querySelector(".resume");
     let navsvg = document.querySelectorAll(".nav-svg");
+    let tabs = document.querySelectorAll("ul li");
+
     let links = document.querySelectorAll(".links");
     if (darkModeState === 0) {
       body.style.background = "#1c1d20";
       body.style.color = "white";
       darkMode.style.color = "white";
-      email.style.color = "white";
-      navsvg.forEach((element) => (element.style.color = "white"));
+      if (email !== null) {
+        email.style.color = "white";
+        resume.style.color = "#4c5152";
+        resume.style.backgroundColor = "white";
+
+        navsvg.forEach((element) => (element.style.color = "white"));
+      }
+      tabs.forEach((element) => (element.style.color = "#4c5152"));
+      tabs.forEach((element) => {
+        const span = element.querySelector("span");
+        span.style.backgroundColor = "white";
+      });
       links.forEach((element) => (element.style.color = "white"));
       darkModeState = 1;
     } else {
       body.style.background =
         "linear-gradient(to top, #FEFEF1 0%, #FEFCD6 100%)";
       body.style.color = "#4c5152";
-      email.style.color = "#4c5152";
+
       darkMode.style.color = "#4c5152";
-      navsvg.forEach((element) => (element.style.color = "#4c5152"));
+      if (email !== null) {
+        email.style.color = "#4c5152";
+        resume.style.color = "white";
+        resume.style.backgroundColor = "#4c5152";
+        navsvg.forEach((element) => (element.style.color = "#4c5152"));
+      }
+      tabs.forEach((element) => (element.style.color = "white"));
+      tabs.forEach((element) => {
+        const span = element.querySelector("span");
+        span.style.backgroundColor = "#4c5152";
+      });
       links.forEach((element) => (element.style.color = "#4c5152"));
       darkModeState = 0;
     }
   }
+  const navigate = useNavigate();
+  const handleHome = () => {
+    navigate("/", { state: false });
+  };
+  const handleProj = () => {
+    navigate("/projects");
+  };
+  const handleExp = () => {
+    navigate("/experience");
+  };
 
   return (
     <nav>
-      <a href="ResumeMarch.pdf" target="_blank" className="resume">
-        Resume{" "}
-      </a>
-      <a
-        href="https://github.com/dylmcgold"
-        target="_blank"
-        className="buzz-out-on-hover"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          alt="github"
-          className="nav-svg"
-        >
-          <path
-            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
-            fill="currentColor"
-          />
-        </svg>
-      </a>
-      <a
-        href="https://www.linkedin.com/in/dylanmcgoldrick/"
-        target="_blank"
-        className="buzz-out-on-hover"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          alt="linked in"
-          className="nav-svg"
-        >
-          <path
-            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
-            fill="currentColor"
-          />
-        </svg>
-      </a>
-      <a
-        href="mailto:dylanmcgoldrick@gmail.com"
-        className="email buzz-out-on-hover"
-      >
-        dylanmcgoldrick@gmail.com
-      </a>
-      <p className="nav-text">Dark Mode</p>
-      <button id="darkMode" onClick={darkMode}>
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="dark-mode"
-        >
-          <path
-            d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
-            fill="currentColor"
-          />
-          <path
-            fillRule="evenodd"
-            clipRule="evenodd"
-            d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
-            fill="currentColor"
-          />
-        </svg>
-      </button>
+      <ul>
+        <li onClick={handleHome}>
+          <span>Home</span>
+        </li>
+        <li onClick={handleProj}>
+          <span>Projects</span>
+        </li>
+        <li onClick={handleExp}>
+          <span>Experience</span>
+        </li>
+      </ul>
+
+      <div className="darkcontainer">
+        <p className="nav-text">Dark Mode</p>
+        <button id="darkMode" onClick={darkMode}>
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            className="dark-mode"
+          >
+            <path
+              d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8V16Z"
+              fill="currentColor"
+            />
+            <path
+              fillRule="evenodd"
+              clipRule="evenodd"
+              d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM12 4V8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+      </div>
     </nav>
   );
 }
