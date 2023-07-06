@@ -166,7 +166,7 @@ function App() {
       <div id="main">
         <h1>About Me</h1>
         <div className="linkcontainer">
-          <a href="ResumeMarch.pdf" target="_blank" className="resume">
+          <a href="DylanM_Resume.pdf" target="_blank" className="resume">
             Resume{" "}
           </a>
           <a

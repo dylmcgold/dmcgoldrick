@@ -23,11 +23,11 @@ export default function Nav() {
 
         navsvg.forEach((element) => (element.style.color = "white"));
       }
-      tabs.forEach((element) => (element.style.color = "#4c5152"));
-      tabs.forEach((element) => {
-        const span = element.querySelector("span");
-        span.style.backgroundColor = "white";
-      });
+      tabs.forEach((element) => (element.style.color = "white"));
+      // tabs.forEach((element) => {
+      //   const span = element.querySelector("span");
+      //   span.style.backgroundColor = "white";
+      // });
       links.forEach((element) => (element.style.color = "white"));
       darkModeState = 1;
     } else {
@@ -38,15 +38,15 @@ export default function Nav() {
       darkMode.style.color = "#4c5152";
       if (email !== null) {
         email.style.color = "#4c5152";
-        resume.style.color = "white";
+        resume.style.color = "#fefcd6";
         resume.style.backgroundColor = "#4c5152";
         navsvg.forEach((element) => (element.style.color = "#4c5152"));
       }
-      tabs.forEach((element) => (element.style.color = "white"));
-      tabs.forEach((element) => {
-        const span = element.querySelector("span");
-        span.style.backgroundColor = "#4c5152";
-      });
+      tabs.forEach((element) => (element.style.color = "#4c5152"));
+      // tabs.forEach((element) => {
+      //   const span = element.querySelector("span");
+      //   span.style.backgroundColor = "#4c5152";
+      // });
       links.forEach((element) => (element.style.color = "#4c5152"));
       darkModeState = 0;
     }

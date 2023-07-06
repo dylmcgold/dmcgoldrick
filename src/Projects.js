@@ -51,6 +51,11 @@ function Projects() {
     // y[slideIndex - 1].style.display = "block";
     // dots[slideIndex - 1].className += " w3-white";
   }
+  //   function iframe() {
+  //     $('#iframeTou').attr('src', 'Privacy_Policy/H2eEile%20-Terms-of-Use.pdf#page=1&zoom=100');
+  //     $('#divTermsOfUse').modal("show");
+  //     return false;
+  // }
   useEffect(() => {
     document
       .getElementById("w3-left")
@@ -67,11 +72,11 @@ function Projects() {
         <h2>MusicMate</h2>
         <div className="plike1">
           <div className="wrapper">
-            <iframe
+            <embed
               className="musicmate"
               src="https://drive.google.com/file/d/1eRPjpqeXySQEg2-RvsyeYhQm7P5Bfo6q/preview"
               allow="autoplay"
-            ></iframe>
+            ></embed>
           </div>
         </div>
         <p>
@@ -107,33 +112,33 @@ function Projects() {
         <div className="container">
           <div className="plike">
             <div className="wrapper1">
-              <iframe
+              <embed
                 className="mySlides"
                 src="https://drive.google.com/file/d/19U6gt15UkBwAfvbbSfSGXw8uY9TcLIDk/preview"
                 allow="autoplay"
-              ></iframe>
+              ></embed>
             </div>
           </div>
 
           <div className="plike">
             <div className="wrapper1" style={{ padding: "0px" }}>
-              <iframe
+              <embed
                 className="mySlides"
                 src="https://drive.google.com/file/d/1jIVr3HzrAJ-XpqfZJ3QyqmUJfgg6n824/preview"
                 allow="autoplay"
                 style={{ display: "none" }}
-              ></iframe>
+              ></embed>
             </div>
           </div>
 
           <div className="plike">
             <div className="wrapper1" style={{ padding: "0px" }}>
-              <iframe
+              <embed
                 className="mySlides"
                 src="https://drive.google.com/file/d/1CT8BDoZHKCrPbp0HQt2zcs7NGqOB9Dub/preview"
                 allow="autoplay"
                 style={{ display: "none" }}
-              ></iframe>
+              ></embed>
             </div>
           </div>
 
