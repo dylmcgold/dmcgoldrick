@@ -5,12 +5,15 @@
 /.pnp
 .pnp.js
 /website
+/tempfolder
 
 # testing
 /coverage
+src/assets/
 
 # production
 /build
+
 
 # misc
 .env

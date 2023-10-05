@@ -1,31 +1,44 @@
+/*
+
+=========================================================
+* Now UI Kit React - v1.5.2
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/now-ui-kit-react
+* Copyright 2023 Creative Tim (http://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/now-ui-kit-react/blob/main/LICENSE.md)
+
+* Designed by www.invisionapp.com Coded by www.creative-tim.com
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./App";
-import Projects from "./Projects";
-import Experience from "./Experience";
-import reportWebVitals from "./reportWebVitals";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
+
+// styles for this kit
+import "assets/css/bootstrap.min.css";
+import "assets/scss/now-ui-kit.scss?v=1.5.0";
+import "assets/demo/demo.css?v=1.5.0";
+import "assets/demo/nucleo-icons-page-styles.css?v=1.5.0";
+// pages for this kit
+import Index from "views/Index.js";
+import Experience from "views/Experience";
+import Projects from "views/Projects";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-  // <React.StrictMode>
   <BrowserRouter>
-    {/* <App /> */}
-    {/* <Login /> */}
-    {/* <Link to="/"></Link> */}
     <Routes>
-      <Route path="/*" element={<App />} />
-      {/* <Route path="/login" element={<Login />} /> */}
+      <Route path="/home" element={<Index />} />
       <Route path="/projects" element={<Projects />} />
       <Route path="/experience" element={<Experience />} />
-      {/* <Route path="/register" element={<UserRegister />} /> */}
+
+      <Route path="*" element={<Navigate to="/home" replace />} />
     </Routes>
   </BrowserRouter>
-  // </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
