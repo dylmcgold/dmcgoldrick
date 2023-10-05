@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/dylmcgold/dmcgoldrick/static/css/main.4ab29582.css",
-    "main.js": "/dylmcgold/dmcgoldrick/static/js/main.fda88ecf.js",
+    "main.css": "/dylmcgold/dmcgoldrick/static/css/main.9577ec92.css",
+    "main.js": "/dylmcgold/dmcgoldrick/static/js/main.627a3141.js",
     "static/media/neo4jex1.png": "/dylmcgold/dmcgoldrick/static/media/neo4jex1.412945a90ab51b4337f3.png",
     "static/media/VikingscriptHome.png": "/dylmcgold/dmcgoldrick/static/media/VikingscriptHome.605b99238c0b68286a7d.png",
     "static/media/neo4jex2.png": "/dylmcgold/dmcgoldrick/static/media/neo4jex2.9aaa9387c4dd36b7e216.png",
@@ -15,11 +15,11 @@
     "static/media/nucleo-outline.woff": "/dylmcgold/dmcgoldrick/static/media/nucleo-outline.1a1036e643f97457ec5f.woff",
     "static/media/nucleo-outline.woff2": "/dylmcgold/dmcgoldrick/static/media/nucleo-outline.802141dd0dcc63b21cbb.woff2",
     "index.html": "/dylmcgold/dmcgoldrick/index.html",
-    "main.4ab29582.css.map": "/dylmcgold/dmcgoldrick/static/css/main.4ab29582.css.map",
-    "main.fda88ecf.js.map": "/dylmcgold/dmcgoldrick/static/js/main.fda88ecf.js.map"
+    "main.9577ec92.css.map": "/dylmcgold/dmcgoldrick/static/css/main.9577ec92.css.map",
+    "main.627a3141.js.map": "/dylmcgold/dmcgoldrick/static/js/main.627a3141.js.map"
   },
   "entrypoints": [
-    "static/css/main.4ab29582.css",
-    "static/js/main.fda88ecf.js"
+    "static/css/main.9577ec92.css",
+    "static/js/main.627a3141.js"
   ]
 }
