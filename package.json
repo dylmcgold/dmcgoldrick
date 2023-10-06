@@ -34,7 +34,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://github.com/dylmcgold/dmcgoldrick",
+  "homepage": "https://dylmcgold.github.io/dmcgoldrick/",
   "eslintConfig": {
     "extends": "react-app"
   },
