@@ -18,19 +18,19 @@ function ProfilePageHeader() {
   // const [backgroundImageLoaded, setBackgroundImageLoaded] = useState(false);
 
   useEffect(() => {
-    if (window.innerWidth > 991) {
-      const updateScroll = () => {
-        let windowScrollTop = window.pageYOffset / 3;
-        pageHeader.current.style.transform =
-          "translate3d(0," + windowScrollTop + "px,0)";
-      };
-      window.addEventListener("scroll", updateScroll);
-      return function cleanup() {
-        window.removeEventListener("scroll", updateScroll);
-      };
-    }
-    // console.log("Hello");
+    // if (window.innerWidth > 991) {
+    const updateScroll = () => {
+      let windowScrollTop = window.pageYOffset / 3;
+      pageHeader.current.style.transform =
+        "translate3d(0," + windowScrollTop + "px,0)";
+    };
+    window.addEventListener("scroll", updateScroll);
     getapi("https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY");
+    return function cleanup() {
+      window.removeEventListener("scroll", updateScroll);
+    };
+    // }
+    // console.log("Hello");
   }, []);
 
   async function getapi(url) {

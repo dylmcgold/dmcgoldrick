@@ -32,9 +32,9 @@ function Index() {
       <div className="wrapper">
         <ProfilePageHeader />
         <div className="main">
-          <CompleteExamples />
-          <BasicBackground />
           <Contact />
+          <BasicBackground />
+          <CompleteExamples />
         </div>
         <DarkFooter />
       </div>
