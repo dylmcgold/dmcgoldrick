@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.248dbe2b.css",
-    "main.js": "/static/js/main.71142df6.js",
+    "main.js": "/static/js/main.8244018b.js",
     "static/media/neo4jex1.png": "/static/media/neo4jex1.412945a90ab51b4337f3.png",
     "static/media/VikingscriptHome.png": "/static/media/VikingscriptHome.605b99238c0b68286a7d.png",
     "static/media/neo4jex2.png": "/static/media/neo4jex2.9aaa9387c4dd36b7e216.png",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.248dbe2b.css",
-    "static/js/main.71142df6.js"
+    "static/js/main.8244018b.js"
   ]
 }
