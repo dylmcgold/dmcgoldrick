@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.248dbe2b.css",
-    "main.js": "/static/js/main.8244018b.js",
+    "main.js": "/static/js/main.5011e10d.js",
     "static/media/neo4jex1.png": "/static/media/neo4jex1.412945a90ab51b4337f3.png",
     "static/media/VikingscriptHome.png": "/static/media/VikingscriptHome.605b99238c0b68286a7d.png",
     "static/media/neo4jex2.png": "/static/media/neo4jex2.9aaa9387c4dd36b7e216.png",
@@ -9,7 +9,7 @@
     "static/media/postgresqlex.png": "/static/media/postgresqlex.db6bc0f0847a48e2430b.png",
     "static/media/bg7.jpg": "/static/media/bg7.6249276d677cd6fd680e.jpg",
     "static/media/paymenthandler.png": "/static/media/paymenthandler.a5c1c931d2442490c65e.png",
-    "static/media/ResumeMcG.pdf": "/static/media/ResumeMcG.0c6b2b12d16558d14a3c.pdf",
+    "static/media/mcgresume1.pdf": "/static/media/mcgresume1.5f77ade3f94bc9c27021.pdf",
     "static/media/nucleo-outline.eot": "/static/media/nucleo-outline.56814a6b7240045e1494.eot",
     "static/media/nucleo-outline.ttf": "/static/media/nucleo-outline.1102ed9b2d16dccdec05.ttf",
     "static/media/nucleo-outline.woff": "/static/media/nucleo-outline.1a1036e643f97457ec5f.woff",
@@ -18,6 +18,6 @@
   },
   "entrypoints": [
     "static/css/main.248dbe2b.css",
-    "static/js/main.8244018b.js"
+    "static/js/main.5011e10d.js"
   ]
 }
