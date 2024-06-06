@@ -38,7 +38,7 @@ function Tabs() {
     <>
       <div className="section section-tabs">
         <Container>
-          <Row>
+          {/* <Row>
             <Col className="ml-auto mr-auto" md="10" xl="6">
               <p className="category">MusicMate</p>
               <Card>
@@ -148,7 +148,7 @@ function Tabs() {
                 </CardBody>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
           <Row>
             <Col className="ml-auto mr-auto" md="10" xl="6">
               <p className="category">VikingScript</p>
