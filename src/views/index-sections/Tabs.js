@@ -50,7 +50,7 @@ function Tabs() {
                   >
                     <embed
                       className="musicmate"
-                      src="https://drive.google.com/file/d/1eRPjpqeXySQEg2-RvsyeYhQm7P5Bfo6q/preview"
+                      src="https://drive.google.com"
                       allow="autoplay"
                     ></embed>
                   </TabContent>
